@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Create
+{% endblock %}
+
+{% block content %}
+  <form action="" method="POST">
+    <h1>Create your Item Here</h1>
+    <br>
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="form-group">
+        <!-- display the label for the form field -->
+        {{ field.label_tag }}
+        <!-- display the form field itself -->
+        {{ field }}
+      </div>
+      <br>
+    {% endfor %}
+    <div class="form-group">
+      <!-- add a button to submit the form -->
+      <button type="submit">Create Item</button>
+    </div>
+  </form>
+{% endblock %}

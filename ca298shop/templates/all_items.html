@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+    {% block title %}
+      Library
+    {% endblock %}
+
+{% block content %}
+    <br>
+    {% if items|length == 0 %}
+    <h1>There are no items in this library</h1>
+    {% endif %}
+    <div class="card-container">
+    {% for i in items %}
+    <div class="card bg-white mb-3" style="max-width: 18rem;">
+      <div class="card-header">Pice: €{{ i.price }}<br>Colour: {{ i.colour }}<br>Size: {{ i.size }}<br>Number in Stock: {{ i.quantity }}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{ i.name }}</h5>
+        <a href="/item/{{ i.id }}" class="btn btn-primary">View Item</a>
+        <p class="card-text">{{ i.details }}</p>
+    </div>
+  </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block title %}
+    Home :)
+{% endblock %}
+{% block content %}
+    <br>
+    <!-- Jumbotron element from Bootstrap for a large banner with text -->
+    <div class="jumbotron">
+        <h1 class="display-4">Sizes</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <p></p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/sizes/XL" role="button">XL</a> <!-- Large primary button -->
+            <a class="btn btn-primary btn-lg" href="/sizes/L" role="button">L</a> <!-- Large primary button -->
+            <a class="btn btn-primary btn-lg" href="/sizes/M" role="button">M</a> <!-- Large primary button -->
+            <a class="btn btn-primary btn-lg" href="/sizes/S" role="button">S</a> <!-- Large primary button -->
+            <a class="btn btn-primary btn-lg" href="/sizes/XS" role="button">XS</a> <!-- Large primary button -->
+        </p>
+    </div>
+{% endblock %}

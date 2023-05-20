@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+    {% block title %}
+      Library
+    {% endblock %}
+
+{% block content %}
+    <br>
+    <div class="card-container">
+    <div class="card bg-white mb-3" style="max-width: 18rem;">
+      <div class="card-header">Pice: €{{ item.price }}<br>Colour: {{ item.colour }}<br>Size: {{ item.size }}<br>Number in Stock: {{ item.quantity }}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <a href="/" class="btn btn-primary">Return Home</a>
+        <p class="card-text">{{ item.details }}</p>
+    </div>
+  </div>
+    </div>
+{% endblock %}
